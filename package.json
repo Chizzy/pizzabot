@@ -1,0 +1,12 @@
+{
+  "name": "pizzabot",
+  "version": "1.0.0",
+  "description": "pizzabot challenge (NodeJs)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./teset/test.js",
+    "pizzabot": "index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
