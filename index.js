@@ -50,41 +50,31 @@ let locForBot = [];
 
 function pizzaBot() {
   while (i < housesArr.length) { // O(n)
-    console.log('i1: ' + i);
     let inputX = housesArr[i].pizzaX;
     let inputY = housesArr[i].pizzaY;
     // baseX < inputX || baseY < inputY
     while(baseX !== inputX || baseY !== inputY) { // 
-      console.log(baseX, baseY);
       if(baseX === inputX && baseY === inputY){
         break;
       } else {
           if(baseX < inputX){
             baseX++;
-            console.log('baseX: ' + baseX);
             locForBot.push('E');
           } else {
             baseX--;
-            console.log('baseX: ' + baseX);
             locForBot.push('W');
           }
           if (baseY < inputY) {
             baseY++;
-            console.log('baseY: ' + baseY);
             locForBot.push('N');
           } else {
             baseY--;
-            console.log('baseY: ' + baseY);
             locForBot.push('S');
           }
         }
     }
     locForBot.push('D');
-    i++;
-    console.log(baseX, baseY);
-    
-    console.log('i2: ' + i);
-    
+    i++;    
   }
   console.log(locForBot.join(''))
 }
