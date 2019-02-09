@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "./teset/test.js",
-    "pizzabot": "index.js"
+    ".pizzabot": "nodemon node index"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }
