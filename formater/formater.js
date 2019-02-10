@@ -1,0 +1,1 @@
+// This function will receive as an input the string with the grid a list of points representing houses in need of pizza delivery. The function will return a array of objects with the grid and the coordinates of each house.
