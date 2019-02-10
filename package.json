@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "./teset/test.js",
-    ".pizzabot": "nodemon node index"
+    ".pizzabot": "node index",
+    ".pizzabot-dev": "nodemon node index"
   },
   "author": "",
   "license": "ISC",
