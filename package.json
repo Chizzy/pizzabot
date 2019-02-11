@@ -11,9 +11,7 @@
   "bin": "./src/index",
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "commander": "^2.19.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "jest": "^24.1.0",
     "nodemon": "^1.18.9"
