@@ -1,6 +1,6 @@
 /* This function will recieve an array of objects with the 
 * positions of every house in need of pizza delivery.
-* The function will return a string with the instructions for the pizza robot.
+* The function will return a string with the instructions for the pizzabot.
 */
 
 function plotter(mapper) {
@@ -10,7 +10,7 @@ function plotter(mapper) {
   let coords = mapper.coords;
   
   if(mapper.message === 'error'){
-    const message = 'You have not included a input. Please run again adding a string.'
+    const message = 'You have not included an input. Please run again adding a string.'
     return message;
   }
 
@@ -20,11 +20,11 @@ function plotter(mapper) {
   const gridY = mapper.grid.y;
 
   if(!(mapper.coords[i].x <= gridX)) {
-    const message = 'At least one of the house is out of the delivery zone. Try again.'
+    const message = 'At least one of the houses is out of the delivery zone. Try again.'
     return message;
   }
   if (!(mapper.coords[i].y <= gridY)) {
-    const message = 'At least one of the house is out of the delivery zone. Try again.'
+    const message = 'At least one of the houses is out of the delivery zone. Try again.'
     return message;
   }
 

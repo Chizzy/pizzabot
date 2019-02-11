@@ -24,7 +24,7 @@ test ('it should return an String with the instructions for the pizzaBot', ()=> 
   expect(plotter(inputMock)).toBe('DENNNDENEEDSSDDWSWWWDENEEDWNDESESD')
 });
 
-test("coords of houses shouldn't be greater than the grid", () => {
+test("coords of houses are always less than or equal to Grid", () => {
   const grid = inputMock.grid;
   const coords = inputMock.coords
   for (i=0; i < coords.length; i++){
