@@ -1,6 +1,8 @@
 const plotter = require('./plotter');
 
-const coordsMock = [
+const inputMock = {
+  grid : {x: 5, y: 5},
+  coords : [
   { x: 0, y: 0 },
   { x: 1, y: 3 },
   { x: 4, y: 4 },
@@ -10,12 +12,25 @@ const coordsMock = [
   { x: 3, y: 2 },
   { x: 2, y: 3 },
   { x: 4, y: 1 }
-]
+  ]
+}
 
+describe('Plotter', () => { 
 test ('it should return an String', ()=> {
-  expect(typeof plotter(coordsMock)).toBe('string')
+  expect(typeof plotter(inputMock)).toBe('string')
 });
 
-test ('it should return an string with the instructions for the pizzaBot', ()=> {
-  expect(plotter(coordsMock)).toBe('DENNNDENEEDSSDDWSWWWDENEEDWNDESESD')
+test ('it should return an String with the instructions for the pizzaBot', ()=> {
+  expect(plotter(inputMock)).toBe('DENNNDENEEDSSDDWSWWWDENEEDWNDESESD')
+});
+
+test("coords shouldn't be greater than the grid coords", () => {
+  const grid = inputMock.grid;
+  const coords = inputMock.coords
+  for (i=0; i < coords.length; i++){
+    expect(coords[i].x).toBeLessThanOrEqual(grid.x);
+    expect(coords[i].y).toBeLessThanOrEqual(grid.y);
+  };
+});
+
 });
