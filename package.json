@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch *.js",
     "./pizzabot": "node ./src/index",
-    "./pizzabot-dev": "nodemon node ./src/index"
+    "./pizzabot-dev": "nodemon ./src/index"
   },
   "bin": "./src/index",
   "author": "",
