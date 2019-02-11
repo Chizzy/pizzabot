@@ -4,7 +4,7 @@
   "description": "pizzabot challenge (NodeJs)",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch *.js",
     "./pizzabot": "node ./src/index",
     "./pizzabot-dev": "nodemon node ./src/index"
   },
