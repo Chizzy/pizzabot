@@ -5,40 +5,50 @@
 function plotter(coords) {
   let baseX = 0
   let baseY = 0
-  let i = 0;
   let locForBot = [];
 
-  // Get positions // 
-  while (i < coords.length) { // O(n)
+  for (i = 0; i < coords.length; i++) {
     let inputX = coords[i].x;
     let inputY = coords[i].y;
-    while(baseX !== inputX || baseY !== inputY) { // 
+    while(baseX !== inputX || baseY !== inputY) {
       if(baseX === inputX && baseY === inputY){
         break;
       } else {
-          if(baseX < inputX){
+        switch (true) {
+          case(baseX === inputX):
+            break;
+          case (baseX < inputX):
             baseX++;
             locForBot.push('E');
-          } else {
+            break;
+          case (baseX > inputX):
             baseX--;
             locForBot.push('W');
-          }
-          if (baseY < inputY) {
+            break;
+        }
+        switch (true) {
+          case(baseY === inputY):
+            break;
+          case (baseY < inputY):
             baseY++;
             locForBot.push('N');
-          } else {
+            break;
+          case (baseY > inputY):
             baseY--;
             locForBot.push('S');
-          }
+            break;
         }
+      }
     }
     locForBot.push('D');
-    i++;    
   }
-
+  console.log(locForBot);
+    
   const result = locForBot.join('')
   return result
 
 };
+
+// plotter();
 
 module.exports = plotter
