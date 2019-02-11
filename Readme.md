@@ -17,7 +17,7 @@ Welcome to the **PizzaBot App**. This app will give you a list of instructions f
 
 ## Getting Started
 
-Once inside the folder "pizzabot", you can run this app, running in your command line the following command: **npm run ./pizzabot "5x5 (1, 3) (4, 4)"**. This will return a string of instructions.
+Once inside the folder "pizzabot", you can run this app, running in your command line the following command: **npm run ./pizzabot "5x5 (0, 0) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"**. This will return a string of instructions.
 
 ***
 
