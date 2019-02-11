@@ -5,7 +5,6 @@ const plotter = require('./plotter/plotter');
 
 //  Get the string input
 const inputString = process.argv[2];
-console.log(inputString);
 
 // Create a map with the grid and the locations requested.
 const getMapper = formater(inputString);    
