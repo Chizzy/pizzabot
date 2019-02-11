@@ -5,20 +5,20 @@
 function formater (inputString){
   
   const search = (query) => {
-    const map = {
+    const grid = {
       x: parseInt(query.split(' ')[0].split('x')[0], 10),
       y: parseInt(query.split(' ')[0].split('x')[1], 10),
     }    
 
-    const cords = query.match(/\(.*?\)/g).map(cord=>{
-      const arr = cord.replace(/[{( )}]/g, '').split(',')
+    const coords = query.match(/\(.*?\)/g).map(coord=>{
+      const arr = coord.replace(/[{( )}]/g, '').split(',')
       return {x: parseInt(arr[0], 10), y: parseInt(arr[1], 10)}
     })
     
     
     let result = {
-      map: map,
-      cords: cords
+      grid: grid,
+      coords: coords
     }
 
     return result;
@@ -29,4 +29,4 @@ function formater (inputString){
   
 };
 
-module.exports = {formater}
+module.exports = formater

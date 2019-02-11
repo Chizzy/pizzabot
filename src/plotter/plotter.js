@@ -2,16 +2,16 @@
 // the coordinates of every house in need of pizza delivery.
 // The function will return a string with the instructions for the pizza robot.
 
-function plotter(arr2) {
+function plotter(coords) {
   let baseX = 0
   let baseY = 0
   let i = 0;
   let locForBot = [];
 
   // Get positions // 
-  while (i < arr2.length) { // O(n)
-    let inputX = arr2[i].x;
-    let inputY = arr2[i].y;
+  while (i < coords.length) { // O(n)
+    let inputX = coords[i].x;
+    let inputY = coords[i].y;
     while(baseX !== inputX || baseY !== inputY) { // 
       if(baseX === inputX && baseY === inputY){
         break;
@@ -41,4 +41,4 @@ function plotter(arr2) {
 
 };
 
-module.exports = {plotter}
+module.exports = plotter
