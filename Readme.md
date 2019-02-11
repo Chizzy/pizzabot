@@ -9,9 +9,9 @@ Welcome to the **PizzaBot App**. This app will give you a list of instructions f
 
 ### Prerequisites
 
-* You need to have **nodeJS** installed - this app is running in the node *version: 10.15.1*. 
+* You need to have **NodeJS** installed - this app is running in the node *version: 10.15.1*. 
 * You need to have **npm** or **yarn** installed.
-* You need to run **npm install** to download your the dependencies (node_modules folders was excluded in the tar.gz file to reduce the size of the file).
+* You need to run **npm install** to download the dependencies (Jest and NodeMon). The node_modules folder was excluded from the tar.gz file to reduce the size of the file.
 
 ***
 
@@ -35,8 +35,11 @@ We should consider the following assumptions:
 All the tests can be run by the following command **npm run test**.
 
 * All functions are returning the output that we are expecting.
-* The function in charge of returning the instructions (plotter.js) is returning a correct instruction given the a *grid and position* string, for instance, "5x5 (1, 3) (4, 4)" will return "ENNNDENEED".
-* Function in charge of parsing the Input String **"5x5 (1, 3) (4, 4)"** does return a object with a grid with typeof Object and the coordinates of the houses with typeof Array.
+* Function in charge of parsing the Input String (formater.js) **"5x5 (1, 3) (4, 4)"** does return a object with a grid with typeof Object and the coordinates of the houses with typeof Array.
+* If the input string is undefined or empty the app stops and a message is displayed.
+* The function in charge of returning the instructions (plotter.js) is returning a correct instruction given a *grid and position* string, for instance, "5x5 (1, 3) (4, 4)" will return "ENNNDENEED".
+* The function in charge of returning the instructions (plotter.js) checks that the position of the houses are less or equal to the grid.
+
 
 ***
 
