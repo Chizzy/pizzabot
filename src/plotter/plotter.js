@@ -14,17 +14,17 @@ function plotter(mapper) {
     return message;
   }
 
-  // Check that Coords are always less than or equal to the Grid. 
+  // Check that houses Coords are always less than or equal to the Grid. 
   for (i=0; i < coords.length; i++){
   const gridX = mapper.grid.x;
   const gridY = mapper.grid.y;
 
   if(!(mapper.coords[i].x <= gridX)) {
-    const message = 'You are out of the delivery zone. Try again.'
+    const message = 'At least one of the house is out of the delivery zone. Try again.'
     return message;
   }
   if (!(mapper.coords[i].y <= gridY)) {
-    const message = 'You are out of the delivery zone. Try again.'
+    const message = 'At least one of the house is out of the delivery zone. Try again.'
     return message;
   }
 
