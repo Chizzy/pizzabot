@@ -11,8 +11,11 @@
   "bin": "./src/index",
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.18.3"
+  },
   "devDependencies": {
+    "express": "^4.16.4",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9"
   }
