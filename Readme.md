@@ -27,7 +27,7 @@ D: Drop Pizza
 
 ### Alternative 1:
 
-Once inside the folder "pizzabot", you can run this app, running in your command line the following command: **npm run ./pizzabot "5x5 (0, 0) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"**. This will return a string of instructions.
+Once inside the folder "pizzabot", you can run this app, running in your command line the following command: **npm run start "5x5 (0, 0) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"**. This will return a string of instructions.
 
 ### Alternative 2 - Using Curl -X Post to do a Post request:
 
@@ -78,7 +78,7 @@ All the tests can be run by the following command **npm run test**.
 
 ### Pizzbot App
 
-For Development, you can also use the following command **npm run ./pizzabot-dev "StringInput"** to run nodemon in the background. This package allows you to monitor changes in this application and automatically restart the server. This command should be used in development mode. 
+For Development, you can also use the following command **npm run start-dev "StringInput"** to run nodemon in the background. This package allows you to monitor changes in this application and automatically restart the server. This command should be used in development mode. 
 
 ### Express Server
 To start the express server for development, you can ran the following command **npm run start-server-dev**
