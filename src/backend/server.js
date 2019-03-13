@@ -22,8 +22,10 @@ app.get('/pizzabot', function(req, res){
   const gridY = req.query.gridY
   const coordX = req.query.coordX
   const coordY = req.query.coordY
+  const coordX_2 = req.query.coordX_2
+  const coordY_2 = req.query.coordY_2
 
-  const newString = gridX + 'x' + gridY + ' (' + coordX + ', ' + coordY + ')'
+  const newString = gridX + 'x' + gridY + ' (' + coordX + ', ' + coordY + ')' + ' (' + coordX_2 + ', ' + coordY_2 + ')'
   const getMapper = formater(newString)
   const getInstructions = plotter(getMapper)
   res.send(
