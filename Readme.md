@@ -3,7 +3,7 @@
 
 ## Introduction:
 
-Welcome to the **PizzaBot App**. This app will return you a list of instructions for your PizzaBot to deliver pizza to a list of houses. The app will receive a string, form by a grid and a list of points representing houses. For example, the following string "5x5 (0, 0) (1, 3)" could return the follwoing instructions DENNND. The robot always starts at the origin point (0, 0) and it moves in a cartesian plane to the next house. 
+Welcome to the **PizzaBot App**. This app will return you a list of instructions for your PizzaBot to deliver pizza to a list of houses. The app will receive a string, form by a grid and a list of points representing houses. For example, the following string "5x5 (0, 0) (1, 3)" could return the following instructions DENNND. The robot always starts at the origin point (0, 0) and it moves in a cartesian plane to the next house. 
 
 Instructions are one of:
 
@@ -51,13 +51,14 @@ We should consider the following assumptions:
 ### Alternative 3
 * Localhost port expected is always '9292'.
 * Parameters in the URL are always the following:
-  * gridX
-  * gridY
-  * coordX
-  * coordY 
-  * coordX_2
-  * coordY_2
-* We assume that only the coordinates of two houses are passed as parameters in the URL.
+  * gridX = Grid x-coordinate.
+  * gridY = Grid y-coordinate.
+  * coordX = House 1 x-coordinate.
+  * coordY = House 1 y-coordinate.
+  * coordX_2 = House 2 x-coordinate.
+  * coordY_2 = House 2 y-coordinate.
+
+* We assume that only the coordinates of 2 houses are passed as parameters in the URL.
 
 ***
 
