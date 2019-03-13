@@ -27,7 +27,7 @@ First you need to run the Express server, by running **npm run start-server** an
 
 ### Alternative 3 - Using req.query:
 
-You can also run the pizzabot app in the browser using req.query. The express server will get the grid and coordinates of up to two houses. You can go to your favorite browser and run for example **http://localhost:9292/pizzabot?gridX=5&gridY=5&coordX_2=3&coordY_2=1**. This will also return a string of instructions.
+You can also run the pizzabot app in the browser using req.query. The express server will get the grid and coordinates of up to two houses. You can go to your favorite browser and run for example **http://localhost:9292/pizzabot?gridX=5&gridY=5&coordX=1&coordY=0&coordX_2=4&coordY_2=5**. This will also return a string of instructions.
 
 
 ***
@@ -41,7 +41,15 @@ We should consider the following assumptions:
 * If any of the houses has a coordinates greater than the given grid the will app stops and a message is displayed.
 
 ### Alternative 3
-* If the input string is undefined or empty the app stops and a message is displayed.
+* Localhost port expected is always '9292'.
+* Parameters in the URL are always the following:
+  * gridX
+  * gridY
+  * coordX
+  * coordY 
+  * coordX_2
+  * coordY_2
+* We assume that only the coordinates of two houses are passed as parameters in the URL.
 
 ***
 
@@ -59,7 +67,13 @@ All the tests can be run by the following command **npm run test**.
 ***
 
 ## Development
+
+### Pizzbot App
+
 For Development, you can also use the following command **npm run ./pizzabot-dev "StringInput"** to run nodemon in the background. This package allows you to monitor changes in this application and automatically restart the server. This command should be used in development mode. 
+
+### Express Server
+To start the express server for development, you can ran the following command **npm run start-server-dev**
 
 ***
 
