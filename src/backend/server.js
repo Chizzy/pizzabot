@@ -30,7 +30,7 @@ app.get('/pizzabot', function(req, res){
   const getMapper = formater(queryString)
   const getInstructions = plotter(getMapper)
   res.send(
-    'The instructions for the robot are: ' + getInstructions
+    'The instructions for the pizzabot are: ' + getInstructions
   )
 });
 
