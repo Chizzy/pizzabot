@@ -3,7 +3,15 @@
 
 ## Introduction:
 
-Welcome to the **PizzaBot App**. This app will give you a list of instructions for your PizzaBot to deliver pizza to a list of houses. These locations are given a string form by a grid and a list of points representing houses.
+Welcome to the **PizzaBot App**. This app will return you a list of instructions for your PizzaBot to deliver pizza to a list of houses. The app will receive a string, form by a grid and a list of points representing houses. For example, the following string "5x5 (0, 0) (1, 3)" could return the follwoing instructions DENNND. The robot always starts at the origin point (0, 0) and it moves in a cartesian plane to the next house. 
+
+Instructions are one of:
+
+N: Move North
+S: Move South
+E: Move East
+W: Move West
+D: Drop Pizza
 
 ***
 
@@ -21,7 +29,7 @@ Welcome to the **PizzaBot App**. This app will give you a list of instructions f
 
 Once inside the folder "pizzabot", you can run this app, running in your command line the following command: **npm run ./pizzabot "5x5 (0, 0) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"**. This will return a string of instructions.
 
-### Alternative 2 - Sending data with Curl -X Post:
+### Alternative 2 - Using Curl -X Post to do a Post request:
 
 First you need to run the Express server, by running **npm run start-server** and after in a second terminal you can run **echo '5x5 (1, 2) (3, 4)' | curl -X POST -d @- http://localhost:9292/pizzabot**.
 
