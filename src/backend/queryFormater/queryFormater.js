@@ -5,11 +5,12 @@
 
 function queryFormater (gridX, gridY, coordX, coordY, coordX_2, coordY_2){
   const objQuery = {}
+
   switch (true) {
-    case (!coordX || !coordY):
+    case (!coordX && !coordY):
     objQuery.string = gridX + 'x' + gridY + ' (' + coordX_2 + ', ' + coordY_2 + ')'
     break;
-    case (!coordX_2 || !coordY_2):
+    case (!coordX_2 && !coordY_2):
     objQuery.string =  gridX + 'x' + gridY + ' (' + coordX + ', ' + coordY + ')'
     break;
     default:

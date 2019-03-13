@@ -17,7 +17,18 @@ Welcome to the **PizzaBot App**. This app will give you a list of instructions f
 
 ## Getting Started
 
+### Alternative 1:
+
 Once inside the folder "pizzabot", you can run this app, running in your command line the following command: **npm run ./pizzabot "5x5 (0, 0) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"**. This will return a string of instructions.
+
+### Alternative 2 - Sending data with Curl -X Post:
+
+First you need to run the Express server, by running **npm run start-server** and after in a second terminal you can run **echo '5x5 (1, 2) (3, 4)' | curl -X POST -d @- http://localhost:9292/pizzabot**.
+
+### Alternative 3 - Using req.query:
+
+You can also run the pizzabot app in the browser using req.query. The express server will get the grid and coordinates of up to two houses. You can go to your favorite browser and run for example **http://localhost:9292/pizzabot?gridX=5&gridY=5&coordX_2=3&coordY_2=1**. This will also return a string of instructions.
+
 
 ***
 
@@ -26,6 +37,10 @@ Once inside the folder "pizzabot", you can run this app, running in your command
 We should consider the following assumptions:
 
 * The input string has always the same format. That means that the string will always have a grid followed by a pair of positions x, y in parentheses. For instance, **"5x5 (1, 0) (4, 4) (2, 1)"**
+* If the input string is undefined or empty the app stops and a message is displayed.
+* If any of the houses has a coordinates greater than the given grid the will app stops and a message is displayed.
+
+### Alternative 3
 * If the input string is undefined or empty the app stops and a message is displayed.
 
 ***
@@ -52,6 +67,7 @@ For Development, you can also use the following command **npm run ./pizzabot-dev
 
 * [Jest](https://github.com/facebook/jest) for testing.All functions are returning the output that we are expecting.
 * [Nodemon](https://github.com/remy/nodemon) for monitoring changes in this application and automatically restart the server.
+* [Express](https://expressjs.com) help you manage a Node.js Server.
 
 
 
