@@ -4,7 +4,7 @@ const app = express()
 const port = 9292
 const formater = require('../formater/formater');
 const plotter = require('../plotter/plotter');
-
+const queryFormater = require('./queryFormater/queryFormater');
 
 
 app.use(bodyParser.text({type:'*/*'}));
@@ -18,15 +18,16 @@ app.post('/pizzabot', (req, res) => {
 })
 
 app.get('/pizzabot', function(req, res){
-  const gridX = req.query.gridX
-  const gridY = req.query.gridY
-  const coordX = req.query.coordX
-  const coordY = req.query.coordY
-  const coordX_2 = req.query.coordX_2
-  const coordY_2 = req.query.coordY_2
+  const gridX = req.query.gridX,
+  gridY = req.query.gridY,
+  coordX = req.query.coordX,
+  coordY = req.query.coordY,
+  coordX_2 = req.query.coordX_2,
+  coordY_2 = req.query.coordY_2
 
-  const newString = gridX + 'x' + gridY + ' (' + coordX + ', ' + coordY + ')' + ' (' + coordX_2 + ', ' + coordY_2 + ')'
-  const getMapper = formater(newString)
+  const queryString = queryFormater(gridX, gridY, coordX, coordY, coordX_2, coordY_2)
+  
+  const getMapper = formater(queryString)
   const getInstructions = plotter(getMapper)
   res.send(
     'The instructions for the robot are: ' + getInstructions
