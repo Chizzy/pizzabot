@@ -7,11 +7,11 @@ Welcome to the **PizzaBot App**. This app will return you a list of instructions
 
 Instructions are one of:
 
-N: Move North
-S: Move South
-E: Move East
-W: Move West
-D: Drop Pizza
+* N: Move North
+* S: Move South
+* E: Move East
+* W: Move West
+* D: Drop Pizza
 
 ***
 
