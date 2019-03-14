@@ -35,7 +35,7 @@ First you need to run the Express server, by running **npm run start-server** an
 
 ### Alternative 3 - Using req.query:
 
-You can also run the pizzabot app in the browser using req.query. The express server will get the grid and coordinates of up to two houses. You can go to your favorite browser and run for example **http://localhost:9292/pizzabot?gridX=5&gridY=5&coordX=1&coordY=0&coordX_2=4&coordY_2=5**. This will also return a string of instructions. Remember to run the Express server, by running **npm run start-server**
+You can also run the pizzabot app in the browser using req.query. The express server will get the grid and coordinates of up to two houses. You can go to your favorite browser and run for example **http://localhost:9292/pizzabot?gridX=5&gridY=5&coordX=1&coordY=0&coordX_2=4&coordY_2=5**. This will also return a string of instructions. Remember to run the Express server, by running **npm run start-server**.
 
 
 ***
